@@ -11,7 +11,7 @@ So naturally, I ran `sudo apt update` and `sudo apt upgrade`.
 
 Then I ran `hugo version` and still no upgrade. At the time of this writing hugo was at version 0.111.3 and I was still on version 0.92 which dated back to Feb 2022.
 
-## The other way to install Hugo
+## Another Ways to Install Hugo
 
 The official installation instructions for Hugo found on [gohugo.io](https://gohugo.io) is to enter the following command: `sudo apt install hugo`. It's usually the best way to install any package. 
 
@@ -29,7 +29,9 @@ But with the Debian Package Management System `dpkg`, there are a few more steps
 
 Enter the following command:
 
-`sudo apt autoremove hugo`
+```bash
+sudo apt autoremove hugo
+```
 
 ## Steps to Install a Different Version of Hugo With `sudo dpkg -i` 
 
@@ -38,7 +40,9 @@ Enter the following command:
 2. Download the Hugo version that you would like to install by simply clicking on the version which should end up in your `Downloads` folder.
 3. Enter the following command to install the Hugo version: `sudo dpkg -i`  followed by the name of the `.deb` file that you downloaded. For me it was this: 
 
-`sudo dpkg -i 'hugo_extended_0.111.3_linux-amd64.deb'`
+```bash
+sudo dpkg -i 'hugo_extended_0.111.3_linux-amd64.deb'
+```
 
 4. Follow the prompts and you're done.
 5. Run `hugo version` to check that you have the version you wanted.
