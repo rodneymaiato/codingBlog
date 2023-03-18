@@ -1,6 +1,8 @@
 ---
 title: "How to Install a Different Version of Hugo in Linux Debian"
 date: 2023-03-16T17:39:56-07:00
+ShowToc: true
+author: Rod Maiato
 ---
 
 Being new to Linux, I find it surprisingly easy to use. But once in a while, something you would expect to be super simple, turns out to be a brain teaser. For example, I couldn't figure out how to upgrade to the latest version of Hugo. 

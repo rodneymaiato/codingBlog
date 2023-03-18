@@ -1,11 +1,27 @@
 ---
 title: "How to Create a Gitignore File for a Hugo Site"
 date: 2023-03-17T07:12:52-07:00
-draft: false
+tags: ["git"]
 ---
-A requirement to being capable of creating a useful gitignore file is having a good understanding of the  hugo directory structure.
+Creating a useful gitignore file means you understand the hugo directory structure.
 
-Knowing which files need to be tracked means you know what the files do during the build process.
+When you create a hugo site, it will create the following file structure in your project:
+
+```bash
+example/
+├── archetypes/
+│   └── default.md
+├── assets/
+├── content/
+├── data/
+├── layouts/
+├── public/
+├── static/
+├── themes/
+└── config.toml
+```
+
+Getting to know why Hugo creates these files and folders will help you understand which files or folders to add to your .gitignore file. In other words, the files you want to tell git to not track.
 
 My `.gitignore` file contains these lines:
 
@@ -14,3 +30,12 @@ My `.gitignore` file contains these lines:
 /resources/
 .hugo_build.lock
 ```
+
+## Why I Don't Track These Files and Folders
+
+
+
+### Why I Don't Track the Public Folder
+
+
+

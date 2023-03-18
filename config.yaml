@@ -1,0 +1,25 @@
+baseURL: http://example.org/
+languageCode: en-us
+title: Hard Coded
+theme: PaperMod
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
+
+params:
+  ShowShareButtons: true
+  ShowReadingTime: true
+  ShowPostNavLinks: true
+
+menu:
+  main:
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
+    - identifier: about
+      name: about
+      url: /about/
+      weight: 10
