@@ -30,7 +30,7 @@ ls | cat --number | while read lineNumber fName; do mv --no-clobber "fName" "$pr
 
 ## Solving Everyday Problems With BASH Scripts
 
-I like posting sketches and paintings on instagram. But I decided to close my instagram account in favor of posting on my own art blog. When I closed my account, I downloaded all my posts. I ended up with 20 directories with images named like this.
+I like posting sketches and paintings on instagram. But I decided to close my instagram account in favor of posting on my own art blog. When I closed my account, I downloaded all my posts, and ended up with 20 directories containing images named like this.
 
 ```shellscript
 4348385-8758439-9957383-n-7678399.jpg
