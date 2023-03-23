@@ -10,23 +10,23 @@ outputs:
     - JSON # is necessary
 
 params:
-  ShowShareButtons: true 
+  ShowShareButtons: true
   # ShareButtons: ["twitter"]
   ShowReadingTime: true
   ShowPostNavLinks: true
   profileMode:
-        enabled: true
-        title: "" # optional default will be site title
-        subtitle: "My journey with code. I share what I learn and hope you find it useful."
-        imageUrl: "rodsolo.jpg" # optional
-        imageTitle: "Rod Maiato" # optional
-        imageWidth: 120 # custom size
-        imageHeight: 120 # custom size
-        buttons:
-            - name: Portfolio
-              url: "/Portfolio"
-            - name: Github
-              url: "https://github.com/rodneymaiato"
+    enabled: true
+    title: "" # optional default will be site title
+    subtitle: "My journey with code. I share what I learn and hope you find it useful."
+    imageUrl: "rodsolo.jpg" # optional
+    imageTitle: "Rod Maiato" # optional
+    imageWidth: 120 # custom size
+    imageHeight: 120 # custom size
+    buttons:
+      - name: Portfolio
+        url: "/Portfolio"
+      - name: Github
+        url: "https://github.com/rodneymaiato"
 
 menu:
   main:
@@ -37,13 +37,13 @@ menu:
     - identifier: about
       name: about
       url: /about/
-      weight: 30    
-    - identifier: search 
+      weight: 30
+    - identifier: search
       name: search
       url: /search/
-      weight: 15 
+      weight: 15
     - identifier: posts
-      name: posts 
+      name: posts
       url: /posts/
       weight: 10
 

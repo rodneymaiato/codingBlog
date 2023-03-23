@@ -4,4 +4,3 @@ date: {{ .Date }}
 author: Rodney Maiato
 draft: true
 ---
-
