@@ -81,4 +81,6 @@ What `cat --number` outputs is a line that contains two strings; the first is th
 
 ### Step 7 - Use all three variables in the `mv` command to rename each file 
 
-Use the `mv --no-clobber` command to rename files with the two variables that follow the `read` command. The `--no-clobber` flag ensures files don't get overridden. In my script, I used very descriptive names so that I know exactly what those variables are storing, `lineNumber` and `fName` (file name).
+Use the `mv --no-clobber` command to rename files with the two variables that follow the `read` command. The `--no-clobber` flag ensures files don't get overridden.
+
+In my script, I use very descriptive names so that I know exactly what those variables are storing, `lineNumber` and `fName` (file name).
