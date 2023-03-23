@@ -1,6 +1,7 @@
 ---
 title: "How to Create a Gitignore File for a Hugo Site"
 date: 2023-03-17T07:12:52-07:00
+author: Rodney Maiato
 tags: ["git"]
 ---
 Creating a useful gitignore file means you understand the hugo directory structure.
