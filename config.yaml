@@ -1,4 +1,4 @@
-baseURL: http://rodneymaiato.dev/
+baseURL: "http://rodneymaiato.dev/"
 languageCode: en-us
 title: Rodney Maiato
 theme: PaperMod
