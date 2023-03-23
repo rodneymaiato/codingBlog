@@ -30,9 +30,11 @@ ls | cat --number | while read lineNumber fName; do mv --no-clobber "fName" "$pr
 
 ## Solving Everyday Problems With BASH Scripts
 
-I like posting sketches and paintings on instagram.
+I like posting sketches and paintings on instagram. But I decided to close my instagram account in favor of posting on my own art blog. When I closed my account, I downloaded all my posts. I ended up with 20 directories with images named like this.
 
-I decided to close my instagram account in favor of posting on my own art blog. And, when I closed my account, and downloaded all my posts, I ended up with 20 directories with images named like this.
+```shellscript
+4348385-8758439-9957383-n-7678399.jpg
+```
 
 Manually renaming all the photos was going to take hours. But I could write a bash script in minutes and running it would take seconds.
 
@@ -48,7 +50,7 @@ Seems simple enough unless you're new to scripting in BASH.
 
 ## Breaking Down the Solution - Step by Step 
 
-### Step 1 - Create a Variable to Store a Prefix
+### Step 1 - Create a variable to store a prefix
 
 In my version of the script, I wanted to be able to rename image files with a meaningful prefix, so I started the script with a `read -p` command. 
 
@@ -57,10 +59,10 @@ read -p "Choose a prefix for your image files: " prefix
 ```
 When I run the script, I get prompted to enter a prefix of my liking and it assigns what I enter to a variable I named `prefix`. If I enter "national_park", that's what gets stored in the `prefix` variable.
 
-### Step 2 - List the Files in Your Directory
+### Step 2 - List the files in your directory
 The first part of the code is an `ls` command. When you run it, you can add flags like `-a` of `-l`. But there isn't a flag for  generating numbered lines with the `ls` command. Luckily, the `cat` command can.
 
-### Step 3 - Generate Numbered Lines With the `cat` Command
+### Step 3 - Generate numbered lines with the `cat` command
 
 So what next? We need to pipe the output of `ls` into `cat --number`. If you had a directory with 10 `.jpg` files and ran `ls | cat --number`, it would look like this:
 
@@ -68,11 +70,11 @@ So what next? We need to pipe the output of `ls` into `cat --number`. If you had
 
 With `cat --number` you get two strings separated by a space. This will be important for the next command.
 
-### Step 5 - Create a Loop to Read Each Line 
+### Step 5 - Create a loop to read each line 
 
 We need to process the output by the `ls | cat --number` command, one line at a time, so... we need to use a `while` loop.
 
-### Step 6 - Assign Each String from the `cat` Output to a Variable
+### Step 6 - Assign each string from the `cat` output to a variable
 
 The `read` command can take input and assign it to a variable. It can take more than one input. You can simply write `read input1 input2 input3` and will take 3 inputs as long as they are separated by a string.
 
@@ -83,4 +85,10 @@ What `cat --number` outputs is a line that contains two strings; the first is th
 
 Use the `mv --no-clobber` command to rename files with the two variables that follow the `read` command. The `--no-clobber` flag ensures files don't get overridden.
 
-In my script, I use very descriptive names so that I know exactly what those variables are storing, `lineNumber` and `fName` (file name).
+In my script, I use very descriptive names so that I know exactly what those variables are storing, `lineNumber` and `fName` (file name). And in step 1, earlier, I took in the `prefix` variable.
+
+All three variables are used in the `mv` command to perform the renaming of each file.
+
+## Conclusion
+
+Simple commands like `ls`, `cat`, and `mv` may seem limited on their own, but piping them into each other opens up a whole new world of possibilities. 
