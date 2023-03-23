@@ -40,13 +40,13 @@ Manually renaming all the photos was going to take hours. But I could write a ba
 
 ## The Logic Behind Renaming Files in Numerical Order 
 
-I wanted the bash script to take any file name and rename it in such a way that:
--  add a custom prefix 
--  followed by an underscore
--  followed by a number that increments by one every time a new file is renamed 
-- add a `.jpg` extension
+I wanted the bash script to take any file name and rename with:
+- custom prefix 
+- followed by an underscore
+- contain sequential numbering 
+- end with a `.jpg` extension
 
-Seems simple enough unless you're new to scripting in BASH. 
+Seemed simple enough at first, but it proved to be challenging for me.
 
 ## Breaking Down the Solution - Step by Step 
 
