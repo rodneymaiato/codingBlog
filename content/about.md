@@ -9,4 +9,4 @@ Hi, I'm Rodney.
 
 ...And this is a good hair day!
 
-![rodney](/me_gigi.jpg)
+<!-- ![rodney](/me_gigi.jpg) -->
