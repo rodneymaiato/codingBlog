@@ -13,7 +13,7 @@ outputs:
 params:
   homeInfoParams:
       Title: Welcome! 
-      Content: This is write about coding and decoding 
+      Content: This is where I write about coding and decoding 
 
   socialIcons: # optional
       - name: "Twitter"
