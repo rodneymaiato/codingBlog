@@ -32,7 +32,7 @@ With the Debian Package Management System `dpkg`, there are a few more steps, bu
 
 Enter the following command:
 
-```bash
+```shellscript
 sudo apt autoremove hugo
 ```
 
@@ -43,9 +43,8 @@ sudo apt autoremove hugo
 2. Download the Hugo version that you would like to install by simply clicking on the version which should end up in your `Downloads` folder.
 3. Enter the following command to install the Hugo version: `sudo dpkg -i`  followed by the name of the `.deb` file that you downloaded. For me it was this: 
 
-```bash
+```shellscript
 sudo dpkg -i 'hugo_extended_0.111.3_linux-amd64.deb'
-
 ```
 
 4. Follow the prompts and you're done.
