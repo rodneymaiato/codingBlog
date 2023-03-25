@@ -4,6 +4,8 @@ title: Rodney Maiato
 theme: PaperMod
 enableInlineShortcodes: true
 
+googleAnalytics: G-4Q4P648RX1
+
 outputs:
   home:
     - HTML
