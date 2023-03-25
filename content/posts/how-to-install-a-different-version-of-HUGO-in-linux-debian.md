@@ -45,6 +45,7 @@ sudo apt autoremove hugo
 
 ```bash
 sudo dpkg -i 'hugo_extended_0.111.3_linux-amd64.deb'
+
 ```
 
 4. Follow the prompts and you're done.
