@@ -72,7 +72,7 @@ The `mv` command use the `$file` variable declared in the `for` loop and renames
 
 ### The `printf` command explained
 
-The `printf` command uses `%03d` format to apply to the varaible `i` that was is being used as a counter.
+The `printf` command uses `%03d` to format the variable `i` that is being used as a counter.
 
 ```shellscript
 "$(printf $prefix"_%03d.jpg" "$i")"
