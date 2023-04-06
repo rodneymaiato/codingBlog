@@ -32,10 +32,15 @@ googleAnalytics: G-MEASUREMENT_ID
 ```
 
 - Replace `G-MEASUREMENT_ID` with the google tag ID found in your google analytics account for that site.
+- use the appropriate Google Analytics template that Hugo provides. You're likely going to need the Google Analytics 4 template. You don't need to create a template. Hugo has several internal templates. All you need to do is add the code below immediately after the opening head tag.
+
+```shellscript
+{{ template "_internal/google_analytics.html" . }}
+```
 - Save the changes.
 - If you use a hosting platform like Netlify, commit your changes to Github and your site will be updated.
 
-Google will begin tracking your site. When you log into your Google Analytics account, you should see message that says, your data collection is active and that it may take up to 24 hours to appear in your Analytics account.
+Google will begin the process of tracking your site. When you log into your Google Analytics account, you will see a message indicating that no data has not yet been collected because your site is too new. And, in a day or two, a message that says, your data collection is active and that it may take up to 24 hours to appear in your Analytics account.
 
 ![google analytics message](/google_analytics_setup.png)
 
