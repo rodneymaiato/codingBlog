@@ -40,7 +40,7 @@ googleAnalytics: G-MEASUREMENT_ID
 - Save the changes.
 - If you use a hosting platform like Netlify, commit your changes to Github and your site will be updated.
 
-Google will begin the process of tracking your site. When you log into your Google Analytics account, you will see a message indicating that no data has not yet been collected because your site is too new. And, in a day or two, a message that says, your data collection is active and that it may take up to 24 hours to appear in your Analytics account.
+Google will begin the process of tracking your site. When you log into your Google Analytics account, you will see a message indicating that data has not yet been collected because your site is too new. And, in a day or two, a message that says, your data collection is active and that it may take up to 24 hours to appear in your Analytics account.
 
 ![google analytics message](/google_analytics_setup.png)
 
