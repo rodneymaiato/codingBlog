@@ -26,7 +26,4 @@ Thank you for joining me on this journey of technology, creativity, and business
 
 If you have any questions, want to collaborate, or just want to connect, please don't hesitate to reach out. I'd love to hear from you.
 
-
-Feel free to customize this draft to better align with your personal style and preferences for your "About Me" page on rodneymaiato.dev.
-
 ![rodney](/rod350.jpg)
