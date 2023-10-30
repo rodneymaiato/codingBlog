@@ -3,34 +3,76 @@ title: "How to Setup the Official Hugo Module for Bootstrap 5 SCSS and JS"
 date: 2023-10-29T17:56:08-07:00
 author: Rodney Maiato
 tags: ["hugo"]
-draft: true 
+draft: false
 ---
+To get started with the Hugo Bootstrap module, follow these simplified steps:
 
-To get started, head over to the official Hugo Bootstrap repository. You can find detailed instructions in the <a href="https://github.com/gohugoio/hugo-mod-bootstrap-scss#readme" target="_blank">README</a> file. 
+## Step 1 - Initialize Your Project as a Hugo Module
+1. Open your terminal.
+2. Use the command `hugo mod init github.com/your-username/repository-name`, replacing "your-username" and "repository-name" with your GitHub information.
+3. This creates a file called `go.mod` in your project's root.
 
-The README assumes that you're already pretty experienced with Hugo modules. But if you're in the same boat as me and don't have a lot of experience with them, don't worry. I'm going to walk you through the setup step by step.
+## Step 2 - Add Hugo Bootstrap Module to Your Config File
+1. Locate your project's configuration file, which could be named `config.toml` or `hugo.toml`.
+2. Add the following code in the `.toml` format, or adjust if you prefer YAML or JSON:
+   ```toml
+   [module]
+   [[module.imports]]
+   path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
+   ```
 
-Now, let's dive into the process of setting everything up without a hitch. Here's a complete, easy-to-follow guide that will help you get things up and running smoothly. 
+## Step 3 - Update the Added Module
+1. In your terminal, run `hugo mod get -u`.
+2. This command downloads the module to your project, and you'll find a new file called `go.sum` in your project's root.
 
-To use this guide, make sure that you have a Hugo site in development and that you have a Github repository set up.
+## Step 4 - Create SCSS and JS Files in the Assets Directory
+1. Inside your project, create a folder named "scss" in the assets directory.
+2. In the "scss" folder, create a file named "styles.scss".
+3. Create another folder in the assets directory named "js".
+4. In the "js" folder, create a file named "index.js".
+5. You should now have these files: `/assets/scss/styles.scss` and `/assets/js/index.js`.
 
-## Step 1 - Initialize your project as a Hugo module 
-You'll need to run `hugo mod init github.com/your username/repository name]` in your terminal followed by where your repository the URL of your repository. 
+## Step 5 - Add CSS and JS Links in Your Project's Head
+1. In the head section of your website, add links to the files created in step 4. This allows your pages to access the SCSS and JS files for styling and functionality.
+2. Add the following code just above the closing head tag (`</head>`):
+   ```html
+   {{/* Load Bootstrap SCSS. */}}
+   {{ $options := dict "enableSourceMap" true }}
+   {{ if hugo.IsProduction}}
+   {{ $options := dict "enableSourceMap" false "outputStyle" "compressed" }}
+   {{ end }}
+   {{ $styles := resources.Get "scss/styles.scss" }}
+   {{ $styles = $styles | resources.ToCSS $options }}
+   {{ if hugo.IsProduction }}
+   {{ $styles = $styles | fingerprint }}
+   {{ end }}
+   <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
 
-Once you run that code, a new file named `go.mod` will be created at the root of your project.
+   {{/* Load Bootstrap JS. */}}
+   {{ $js := resources.Get "js/index.js" }}
+   {{ $params := dict }}
+   {{ $sourceMap := cond hugo.IsProduction "" "inline" }}
+   {{ $opts := dict "sourceMap" $sourceMap "minify" hugo.IsProduction "target" "es2018" "params" $params }}
+   {{ $js = $js | js.Build $opts }}
+   {{ if hugo.IsProduction }}
+   {{ $js = $js | fingerprint }}
+   {{ end }}  
+   <script src="{{ $js.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }} defer></script>
+   ```
 
-## Step 2 - Add the code for the Hugo Bootstrap module to your config file
-Your project's configuration file will be named config.toml, or in recent hugo versions, the config file is named hugo.toml. The toml format is used by default, but it also accepts config files in yaml, or jason format. The code below is in .toml format. Convert the code accordingly if you prefer yaml or json format. 
+## Step 6 - Import Bootstrap Components for SCSS
+1. Open your "styles.scss" file in the "assets/scss" directory.
+2. Add the following code to import all Bootstrap styles:
+   ```scss
+   @import "bootstrap/bootstrap";
+   ```
 
-Add the following code to your config.toml or hugo.toml file:
-```
-[module]
-[[module.imports]]
-path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
-```
-## Step 3 - Update the module that you just added
-In step 2, you added the code for the module, but now you have to tell hugo to download the module to your project. Run `hugo mod get -u` in your terminal. Once completed, you'll have a new file at the root of your project named `go.sum` which contain the modules.
+## Step 7 - Import Bootstrap JavaScript Components
+1. Open your "index.js" file in the "assets/js" directory.
+2. Depending on your needs, import Bootstrap JavaScript components like this:
+   ```js
+   import "js/bootstrap/src/collapse";
+   import "js/bootstrap/src/dropdown";
+   ```
 
-## Step 4 - Create the necessary files and folders for the SCSS and JS in the Assets Directory
-
-## Step 5 - Add the the necessary CSS and JS links in the head of your project. 
+Following these steps will help you set up Hugo Bootstrap for your project. If you want to select specific Bootstrap styles, you can refer to the [full list here](https://github.com/gohugoio/hugo-mod-bootstrap-scss/tree/main#scss).
