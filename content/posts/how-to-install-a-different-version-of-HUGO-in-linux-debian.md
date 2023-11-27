@@ -41,7 +41,7 @@ For those who want to take matters into their own hands and choose a specific Hu
    ```
 
 2. ### Download Your Desired Hugo Version:
-   Visit the official Hugo releases page at [gohugo.io/hugo/releases](https://gohugo.io/hugo/releases) and choose the Hugo version you want to install. Simply click on your chosen version, and it will typically end up in your Downloads folder.
+   Visit the official Hugo releases page at [gohugo.io/hugo/releases](https://github.com/gohugoio/hugo/releases) and choose the Hugo version you want to install. Simply click on your chosen version, and it will typically end up in your Downloads folder.
 
 3. ### Install Your Chosen Hugo Version with dpkg:
    Once you've downloaded the Hugo version you desire, open your terminal and run the following command. Make sure to replace the file name with the one you downloaded:
