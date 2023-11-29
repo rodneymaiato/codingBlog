@@ -4,6 +4,7 @@ date: 2023-03-18T09:22:25-07:00
 author: Rodney Maiato
 draft: false 
 tags: ["google analytics","hugo"]
+description: "Unlock the power of data with Google Analytics on your Hugo site in under 5 minutes! 🚀📊 Follow these step-by-step instructions to seamlessly integrate tracking and gain valuable insights. Boost your site's performance with Hugo and Google Analytics magic! ✨💻 #Hugo #GoogleAnalytics #SEOBoost" 
 ---
 
 Assuming you've already set up a Google Analytics account, here's how you add it to your Hugo site. (If not then, see this post for instructions.)

@@ -4,6 +4,7 @@ date: 2023-03-18T13:30:54-07:00
 author: Rodney Maiato
 tags: ["bash", "bash script", "rename"]
 ShowToc: true
+description: "Transform chaos into order with this incredible BASH script! 🚀 Rename your .jpg files effortlessly in a custom sequence. Say goodbye to cryptic names and hello to organized bliss! 💡🔄 #BASHMagic #FileOrganization #TechTips"
 ---
 To rename files in numbered sequence, use a simple Bash script in the directory.
 

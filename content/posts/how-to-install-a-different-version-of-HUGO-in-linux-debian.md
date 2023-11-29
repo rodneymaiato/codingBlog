@@ -4,6 +4,7 @@ date: 2023-03-16T17:39:56-07:00
 ShowToc: true
 author: Rodney Maiato
 tags: ["hugo"]
+description: "Empower your Linux experience by upgrading Hugo with precision using dpkg! 🚀🐧 Dive into this step-by-step guide to select and install any Hugo version you desire. Say goodbye to outdated versions and hello to flexibility! 💻✨ #Hugo #LinuxTips #UpgradeGuide"
 ---
 Before we dive into the details, here's the code you'll need to upgrade Hugo to a specific version using dpkg:
 
@@ -34,25 +35,25 @@ For those who want to take matters into their own hands and choose a specific Hu
 
 ## Here's a step-by-step guide to updating Hugo to the version of your choice:
 
-1. ### Uninstall Your Existing Hugo Version:
+ ### Uninstall Your Existing Hugo Version:
    To clear the path for the new Hugo version, uninstall your existing installation by running the following command:
    ```bash
    sudo apt autoremove hugo
    ```
 
-2. ### Download Your Desired Hugo Version:
+### Download Your Desired Hugo Version:
    Visit the official Hugo releases page at [gohugo.io/hugo/releases](https://github.com/gohugoio/hugo/releases) and choose the Hugo version you want to install. Simply click on your chosen version, and it will typically end up in your Downloads folder.
 
-3. ### Install Your Chosen Hugo Version with dpkg:
+### Install Your Chosen Hugo Version with dpkg:
    Once you've downloaded the Hugo version you desire, open your terminal and run the following command. Make sure to replace the file name with the one you downloaded:
    ```bash
    sudo dpkg -i 'hugo_extended_0.111.3_linux-amd64.deb'
    ```
 
-4. ## Follow the Prompts:
+### Follow the Prompts:
    The installation process will prompt you for any necessary actions or confirmations. Follow these prompts to complete the installation.
 
-5. ## Verify Your Hugo Version:
+### Verify Your Hugo Version:
    After installation, you can double-check that you have successfully updated to the version you wanted by running:
    ```bash
    hugo version

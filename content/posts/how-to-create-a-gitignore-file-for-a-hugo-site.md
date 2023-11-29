@@ -4,6 +4,7 @@ date: 2023-03-17T07:12:52-07:00
 author: Rodney Maiato
 tags: ["git"]
 ShowToc: true
+description: "Master the art of crafting the perfect .gitignore file for your Hugo site! 🚀 Uncover the secrets behind the directory structure and learn why certain files, like /public/ and .hugo_build.lock, deserve to be ignored. Streamline your Git repository for ultimate efficiency! 💻🔗 #Hugo #GitTips #CodeEfficiency"
 ---
 Creating a useful gitignore file means you understand the hugo directory structure.
 
