@@ -10,7 +10,7 @@ Creating a useful gitignore file means you understand the hugo directory structu
 
 At the very least, a `.gitignore` file for a Hugo site should contain these lines:
 
-```shellscript
+```bash
 /public/
 /resources/
 .hugo_build.lock

@@ -36,7 +36,7 @@ To get started with the Hugo Bootstrap module, follow these simplified steps:
 ## Step 5 - Add CSS and JS Links in Your Project's Head
 1. In the head section of your website, add links to the files created in step 4. This allows your pages to access the SCSS and JS files for styling and functionality.
 2. Add the following code just above the closing head tag (`</head>`):
-   ```html
+   ```go-html-template
    {{/* Load Bootstrap SCSS. */}}
    {{ $options := dict "enableSourceMap" true }}
    {{ if hugo.IsProduction}}
