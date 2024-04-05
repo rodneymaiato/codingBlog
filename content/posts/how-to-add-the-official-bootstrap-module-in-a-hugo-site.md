@@ -5,7 +5,7 @@ author: Rodney Maiato
 tags: ["hugo"]
 draft: false
 description: "Supercharge Your Hugo Website with Bootstrap! 🚀 Follow these easy steps to seamlessly integrate Bootstrap into your Hugo project. Elevate your web development skills and create stunning sites effortlessly. Dive into the ultimate guide now! 💻✨ #Hugo #BootstrapMagic #WebDevSecrets"
-
+showComments: true
 ---
 To get started with the Hugo Bootstrap module, follow these simplified steps:
 
