@@ -65,13 +65,14 @@ smartTOCHideUnfocusedChildren = true
   showPagination = true
   invertPagination = false
   showReadingTime = true
-  showTableOfContents = true 
+  showTableOfContents = false 
   showRelatedContent = false
   # relatedContentLimit = 3
   showTaxonomies = true 
   showAuthorsBadges = false
   showWordCount = true
   # sharingLinks = [ "linkedin", "twitter", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram"]
+  showComments = true
 
 [list]
   showHero = false
@@ -79,7 +80,7 @@ smartTOCHideUnfocusedChildren = true
   layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
   layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
   showBreadcrumbs = false
-  showSummary = false
+  showSummary = true
   showViews = false
   showLikes = false
   showTableOfContents = false
@@ -129,12 +130,17 @@ smartTOCHideUnfocusedChildren = true
 [buymeacoffee]
   identifier = "rodneymaiato"
   globalWidget = true
-  globalWidgetMessage = "Hi!"
+  # globalWidgetMessage = "Hi!"
   globalWidgetColor = "#FFDD00"
-  # globalWidgetPosition = "Right"
+  # globalWidgetPosition = "right"
 
 [verification]
   google = "G-4Q4P648RX1"
   # bing = ""
   # pinterest = ""
   # yandex = ""
+
+[services]
+  [services.disqus]
+    shortname = 'rodneymaiato-dev'
+
