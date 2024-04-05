@@ -140,5 +140,7 @@ smartTOCHideUnfocusedChildren = true
   # pinterest = ""
   # yandex = ""
 
-
+[services]
+  [services.disqus]
+    shortname = 'rodneymaiato-dev'
 
